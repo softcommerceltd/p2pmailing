@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+ ~ Copyright © Soft Commerce Ltd. All rights reserved.
+ ~ See LICENSE.txt for license details.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="SoftCommerce_P2p::core"
+             title="P2P TrackPak"
+             translate="title"
+             module="SoftCommerce_P2p"
+             sortOrder="90"
+             parent="SoftCommerce_Core::core"
+             resource="SoftCommerce_P2p::core"/>
+        <add id="SoftCommerce_P2p::configuration"
+             title="Configuration"
+             translate="title"
+             module="SoftCommerce_P2p"
+             sortOrder="10"
+             parent="SoftCommerce_P2p::core"
+             action="adminhtml/system_config/edit/section/softcommerce_p2p/"
+             resource="SoftCommerce_Avocado::configuration"/>
+    </menu>
+</config>

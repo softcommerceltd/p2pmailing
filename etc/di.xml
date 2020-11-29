@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+ ~ Copyright © Soft Commerce Ltd. All rights reserved.
+ ~ See LICENSE.txt for license details.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Client interface -->
+    <preference for="SoftCommerce\P2p\Http\ClientInterface" type="SoftCommerce\P2p\Http\Client"/>
+    <preference for="SoftCommerce\P2p\Http\RequestGeneratorInterface" type="SoftCommerce\P2p\Http\RequestGenerator"/>
+    <preference for="SoftCommerce\P2p\Http\ResponseGeneratorInterface" type="SoftCommerce\P2p\Http\ResponseGenerator"/>
+    <!-- CLI -->
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="track_shipment" xsi:type="object">SoftCommerce\P2p\Console\Command\TrackShipmentService</item>
+            </argument>
+        </arguments>
+    </type>
+    <!-- Logger -->
+    <virtualType name="SoftCommerceP2pVirtualLogger" type="Magento\Framework\Logger\Monolog">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="debug" xsi:type="object">SoftCommerce\P2p\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="SoftCommerce\P2p\Logger\Logger">
+        <arguments>
+            <argument name="logger" xsi:type="object">SoftCommerceP2pVirtualLogger</argument>
+        </arguments>
+    </type>
+</config>

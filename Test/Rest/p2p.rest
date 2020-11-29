@@ -1,0 +1,11 @@
+###
+POST https://trakpak.co.uk/API/?version=3.0
+Accept: application/json
+Content-Type: application/xml
+
+<TrackShipment>
+  <Apikey>key</Apikey>
+  <Shipment>
+    <TrackingNumber>track_no</TrackingNumber>
+  </Shipment>
+</TrackShipment>
