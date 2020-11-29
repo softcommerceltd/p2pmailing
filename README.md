@@ -25,7 +25,7 @@ Shipment data synchronisation between Magento2 and P2P Mailing https://www.p2pma
 Run the following command from Magento root directory:
 
 ```
-composer config repositories.softcommerce-mintsoft vcs https://github.com/softcommerceltd/p2pmailing.git
+composer config repositories.softcommerce-p2p vcs https://github.com/softcommerceltd/p2pmailing.git
 composer require softcommerce/module-p2p
 ```
 If you receive an error regarding php incompatibility, but you are sure your php version is compatible, then use --ignore-platform-reqs
