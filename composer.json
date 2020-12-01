@@ -23,13 +23,5 @@
             "SoftCommerce\\P2p\\": ""
         }
     },
-    "extra": {
-        "map": [
-            [
-                "*",
-                "SoftCommerce/P2p"
-            ]
-        ]
-    },
     "version": "1.0.0"
 }
